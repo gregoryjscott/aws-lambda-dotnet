@@ -1,0 +1,10 @@
+{
+  "name": "aws-lambda-dotnet",
+  "scripts": {
+    "restore": "dotnet restore src/helloworld",
+    "build": "dotnet compile --native --cpp src/helloworld",
+    "dist": "cp src/helloworld/bin/Debug/dnxcore50/native/helloworld dist/functions/helloworld",
+    "deploy": "apex deploy -C dist",
+    "invoke": "apex invoke -C dist helloworld < dist/request.json"
+  }
+}

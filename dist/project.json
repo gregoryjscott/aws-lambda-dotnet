@@ -1,0 +1,7 @@
+{
+  "name": "dotnet",
+  "description": "",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::529271381487:role/lambda_dynamo_streams"
+}
