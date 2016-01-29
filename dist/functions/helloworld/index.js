@@ -3,7 +3,7 @@ var path = require('path')
 
 exports.handle = function(e, ctx) {
   var exe = path.join(__dirname, 'helloworld')
-  var proc = child.spawn('ls')
+  var proc = child.spawn(exe)
 
   proc.stdout.on('data', function(data) {
     ctx.succeed({ didItWork: data})
