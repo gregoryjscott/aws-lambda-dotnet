@@ -1,2 +1,4 @@
 bin/
 obj/
+npm-debug.log
+dist/functions/helloworld/helloworld
