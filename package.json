@@ -5,6 +5,9 @@
     "build": "dotnet compile --native --cpp src/helloworld",
     "dist": "cp src/helloworld/bin/Debug/dnxcore50/native/helloworld dist/functions/helloworld",
     "deploy": "apex deploy -C dist",
-    "invoke": "apex invoke -C dist helloworld < dist/request.json"
+    "invoke": "apex invoke -C dist helloworld < dist/request.json",
+    "dotnet": "npm run build && npm run dist",
+    "apex": "npm run deploy && npm run invoke",
+    "start": "npm run dotnet && npm run apex"
   }
 }
